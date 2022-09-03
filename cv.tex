@@ -1,0 +1,201 @@
+% cv.tex
+%%
+%% This is my resumé, my curriculum vitae, my skill list.
+%%
+%% Originally based on Russel Dsouza's CV, pulled from
+%% https://github.com/rshwndsz/cv/blob/main/CV.tex on 2022-05-03 and imported
+%% here.
+
+% Preamble
+%% CVs should be one-sided, small-fonted, and on standard paper (I live in the
+%% USA, so letter is standard).
+\documentclass[letterpaper, 10pt, oneside]{article}
+%% For HTML support
+\usepackage[utf8]{inputenc}
+%% Control Spacing between lines.
+\usepackage{lwarp}
+%% UTF-8 is the /minimum/ I use in terms of encoding depth.
+\usepackage{setspace}
+%% Use Table Extensions.
+\usepackage{tabularx}
+%% Allow Multi-Page tables.
+\usepackage{longtable}
+%% I prefer the HTML color model, as that is how I think of colors.
+\usepackage[HTML]{xcolor}
+%% For Hyperlink support.
+\usepackage{hyperref}
+%% For better link colors
+\definecolor{color-link}{HTML}{462700}
+\definecolor{color-file}{HTML}{004627}
+\definecolor{color-url}{HTML}{462700}
+\hypersetup{colorlinks  = true,
+            linkcolor   = color-link,
+            filecolor   = color-file,
+            urlcolor    = color-url, 
+            pdftitle    = {Cody's CV},
+            pdfpagemode = FullScreen,
+}
+%% For nicer table support and thicker borders.
+\usepackage{booktabs}
+%% Setting up how page margins look.
+\usepackage[left=.64in, right=.64in, bottom=.64in, top=.64in]{geometry}
+%% For a thick underline - https://tex.stackexchange.com/a/443445 - unchanged
+%% from Russel's CV.
+\usepackage{lipsum}
+%% For list customizations.
+\usepackage{enumitem}
+
+% === Setup ===
+% Page numbers - 
+% {arabic}=Arabic numerals, {gobble}=no page numbers, {roman}=Roman numerals
+\pagenumbering{arabic}
+
+
+% === My Commands ===
+% Section title - Uppercase with first letter slightly bigger
+\newcommand{\stitle}[1]{\normalsize{\textsc{#1}}}
+% Bold & Italic
+\newcommand{\bdit}[1]{{\textbf{#1}}}
+% Use hyphens instead of bullets for lists
+\def\labelitemi{--}
+\begin{document}
+
+
+% My name
+\noindent\section*{Cody Ryan Perri}
+\rule{\textwidth}{0.5ex}
+
+
+\noindent \begin{longtable}{@{} p{0.13\linewidth} p{0.8\linewidth}}
+  % Address & socials
+  \stitle{Contact}     & 177 Oakville Dr APT TA
+  \hfill \href{mailto:codyperri2@yahoo.com}{codyperri2@yahoo.com} \\
+  
+  \stitle{Information} & Pittsburgh, PA 15220
+  \hfill \url{https://linkedin.com/in/codyperri2} \\
+  
+  & USA \hfill \textcolor{color-url}{+1 (724)-900-3860} \\ \\
+
+  % Objective
+  \stitle{Objective} & Logistician seeks full-time position with established shipping company in the Pittsburgh area.\\ \\
+  
+  % Research interests
+  \stitle{Professional} & Logistics, Reporting, Project Planning and Management \\
+  \stitle{Interests}   & Especially Involving Applied Mathematics \\ \\
+
+  % Education
+  \stitle{Education}
+  
+  & \textbf{\href{https://www.snhu.edu/}{Southern New Hampshire University}}
+  \hfill \textsl{4.0} \\[-1.25em] & Bachelor of Applied Mathematics
+  \hfill \hspace{-3em} \textsl{2022\ --\ Present} \\
+
+  \\[-1.8ex]
+
+  & \textbf{\href{https://www.ccac.edu/}{Community College of Allegheny County}}
+  \hfill \textsl{2.0} \\
+  & General Undergraduate Education, no Major
+  \hfill \hspace{-3em} \textsl{2014\ --\ 2015} \\
+
+  \\[-1.8ex]
+
+  & \textbf{\href{https://www.northallegheny.org/}{North Allegheny Senior High School}}
+  \hfill \textsl{General} \\
+  & High School Diploma
+  \hfill \hspace{-3em} \textsl{2010\ --\ 2014} \\ \\
+
+  % Work Experience
+  & \bdit{Assistant Manager}
+  \hfill  \\
+  & \textsl{\href{https://www.aboutamazon.com/}{Amazon.com, LLC}}
+  \hfill \textsl{Aug 2018\ --\ Sep 2022} \\
+  
+  & \parbox{0.8\textwidth}{I covered changing roles on the overnight sort
+    shift including shift planning, monitoring and managing associate
+    performance, and quality assurance. In Spring 2020, I took ownership of
+    COVID-19 rollouts including training associates in temperature screening
+    procedures, adjusting the building layout to meet social distancing
+    guidelines, and consistently working with others to ensure up to date
+    signage was posted site-wide. In September 2020, I transferred buildings
+    to assist with the launch of the region’s newest delivery station. I
+    started on the load out shift: my responsibilities included ensuring
+    routes were scheduled for the correct times and monitoring route
+    progress. In addition to my previous COVID-19 responsibilities, I handled
+    preparing and overseeing testing—including the shipment of completed
+    tests. In July 2021, I began overseeing the overnight shift in addition
+    to the load out shift, where my responsibilities reflected a combination
+    of both shifts.}
+  \\
+  \\
+  & \bdit{Caterer}
+  \hfill  \\
+  & \textsl{\href{https://www.johnmarshallcatering.com/}{John Marshall Catering}}
+  \hfill \textsl{Jan 2015\ --\ Dec 2018} \\
+  
+  & \parbox{0.8\textwidth}{What Caterers do, I don't know. I did what I did
+    and now I'm here.}
+  \\
+  \\
+  & \bdit{Delivery Driver/Dishwasher}
+  \hfill  \\
+  & \textsl{\href{https://www.totinsdiner.org/}{Totin's Diner}}
+  \hfill \textsl{Oct 2012\ --\ Sep 2018} \\
+  
+  & \parbox{0.8\textwidth}{Dishwash-Delivery Driver. I'm pretty sure that's
+    very self-explanatory.}
+  \\
+  \\
+  \newpage
+  % 
+  \stitle{Relevant} & \bdit{Leadership}
+  \hfill   \textsl{Team Building, Project Management, and Professional Development} \\
+  \stitle{Skills} & \\[-1.75em]
+  & \parbox{0.8\textwidth}{\begin{itemize}
+    \item{\textsl{Team Building:} Basics of LEAN/6\sigma; Coaching and Feedback to
+        and from Coworkers; Commitment to Earning Trust of those I Lead;
+        Adapting roles of a team to Constantly Changing Environments;
+        Achieving Success when under Stress by doing our Best; Active
+        Listening and Responding to the Views of Others.}
+    \item{\textsl{Project Management:} Implementing Projects related to
+        COVID-19; Successfully ushering projects from coception to
+        completion; Adapting to Changing Customer Requests; Achieving More
+        With Less.}
+    \item{\textsl{Professional Development:} Training associates in a variety
+        of pathways; Clearly communicating standard operating procedures;
+        Helping others develop themselves; Facilitating Job Rotation and
+        Remedial Training for associates as needed.}
+    \end{itemize}}
+  \\
+  \\
+  & \bdit{Analytics}
+  \hfill  \\
+  & \textsl{}
+  \hfill \textsl{Data Correlation, Problem Solving, and Statistics} \\
+  
+  & \parbox{0.8\textwidth}{\begin{itemize}
+    \item{\textsl{Deep Diving Metrics:} Efficiently correlate data to show
+        trends and root causes.}
+    \end{itemize}}
+  \\
+  \\
+  \stitle{Relevant} & \bdit{Problem Solving}
+  \hfill   \textsl{Achieving Success in Changing Environments} \\
+  \stitle{Interests} & \\[-1.75em]
+  & \parbox{0.8\textwidth}{\begin{itemize}
+      
+    \item{\textsl{Mathematical Background:} Loves finding patterns in data
+        and trends over time.}
+    \end{itemize}}
+  \\
+  \\
+  \stitle{References} & \bdit{Professional / Personal}
+  \hfill  \\
+  & Available on Request.
+\end{longtable}
+\vspace*{\fill}
+\begin{center}
+  \tiny Made with Lua\LaTeX using GNU Emacs and Git, on GNU Guix 1.3.0. Hosted
+  on \href{https://git.sr.ht/~yewscion/cv}{sourcehut}.
+\end{center}
+
+\end{document}
